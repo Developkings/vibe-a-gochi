@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vibe-board": {
+      "command": "python",
+      "args": ["companion/board_mcp.py"]
+    }
+  }
+}

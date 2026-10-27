@@ -1,0 +1,11 @@
+# build output
+.pio/
+__pycache__/
+*.pyc
+firmware/build/
+
+# EEZ Studio's per-user window state
+*.eez-project-ui-state
+
+# personal settings (pairing token)
+.vibe-buddy/

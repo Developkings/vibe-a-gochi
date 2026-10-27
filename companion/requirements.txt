@@ -1,0 +1,10 @@
+# Vibe-a-Gochi companion — all free / open source.
+#   python -m pip install -r companion/requirements.txt
+websockets>=13        # device link (BSD)
+zeroconf              # finds the device on the WiFi (LGPL)
+numpy                 # audio buffers (BSD)
+faster-whisper        # speech → text, local (MIT); the model downloads on first use (small ≈ 460 MB)
+piper-tts             # text → speech, local (MIT); one voice per language downloads on first use (≈ 60 MB)
+pyperclip             # paste into the Claude app (BSD)
+pywinauto; sys_platform == "win32"   # focus the Claude app window (BSD)
+mcp>=1.2              # (1.x or 2.x) board_mcp.py: the board as Claude Code's screen and buttons (MIT)

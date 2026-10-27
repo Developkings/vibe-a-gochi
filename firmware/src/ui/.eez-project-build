@@ -1,0 +1,32 @@
+{
+  "files": [
+    "actions.h",
+    "eez-flow.cpp",
+    "eez-flow.h",
+    "fonts.h",
+    "images.c",
+    "images.h",
+    "screens.c",
+    "screens.h",
+    "structs.h",
+    "styles.c",
+    "styles.h",
+    "ui.c",
+    "ui.h",
+    "ui_image_pv_approval.c",
+    "ui_image_pv_clock.c",
+    "ui_image_pv_home.c",
+    "ui_image_pv_pet.c",
+    "ui_image_thumb_axolotl.c",
+    "ui_image_thumb_blob.c",
+    "ui_image_thumb_capybara.c",
+    "ui_image_thumb_cat.c",
+    "ui_image_thumb_developking.c",
+    "ui_image_thumb_dragon.c",
+    "ui_image_thumb_duck.c",
+    "ui_image_thumb_ghost.c",
+    "ui_image_thumb_penguin.c",
+    "ui_image_thumb_robot.c",
+    "vars.h"
+  ]
+}
