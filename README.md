@@ -1,13 +1,20 @@
 # Vibe-a-Gochi
 
+![Vibe-a-Gochi: a desk pet that works with Claude Code](docs/images/banner.png)
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-5CC38A)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/Developkings/vibe-a-gochi?color=DA7756)](../../releases/latest)
+[![Board: ESP32-S3](https://img.shields.io/badge/board-ESP32--S3%20·%202.8%22%20touch-74A9F2)](#what-you-need)
+[![PlatformIO](https://img.shields.io/badge/built%20with-PlatformIO%20·%20LVGL%209-F0B54D)](firmware/platformio.ini)
+
 **A desk pet that works with Claude Code.** It lives on a 2.8" ESP32-S3 touch screen, shows what Claude
 is doing, and lets you approve tools, answer Claude's questions and plans, stop it, chat and talk to
 it, without touching the PC.
 
 <p>
   <img src="docs/images/screens/landscape_home.png" width="32%" alt="Home screen">
-  <img src="docs/images/screens/landscape_approval.png" width="32%" alt="Approving a tool">
-  <img src="docs/images/screens/landscape_pet.png" width="32%" alt="The pet's page">
+  <img src="docs/images/screens/landscape_chat.png" width="32%" alt="Chat">
+  <img src="docs/images/screens/landscape_today.png" width="32%" alt="The day's summary">
 </p>
 
 It's built for "vibe coding": you ask Claude Code for something, and while it works you can look away
