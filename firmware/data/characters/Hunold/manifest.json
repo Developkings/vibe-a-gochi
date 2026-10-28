@@ -1,0 +1,26 @@
+{
+  "name": "Hunold",
+  "colors": {
+    "body": "#D6A064",
+    "bg": "#000000",
+    "text": "#FFFFFF",
+    "textDim": "#808080",
+    "ink": "#000000"
+  },
+  "states": {
+    "sleep": "sleep.gif",
+    "idle": [
+      "idle.gif",
+      "idle_idea.gif",
+      "idle.gif",
+      "idle_look.gif"
+    ],
+    "busy": "busy.gif",
+    "attention": "attention.gif",
+    "celebrate": "celebrate.gif",
+    "dizzy": "dizzy.gif",
+    "heart": "heart.gif",
+    "talk": "talk.gif",
+    "listen": "listen.gif"
+  }
+}

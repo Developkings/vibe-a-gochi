@@ -28,6 +28,7 @@ uint32_t led_color = 1;   // forces the first write
 uint8_t derive(const Tama &t, uint32_t now) {
   if (t.connected && t.waiting > 0) return P_ATTENTION;
   if (t.connected && t.running > 0) return P_BUSY;   // one session working is enough
+  if (link_demo() && t.total == 0) return P_SLEEP;    // the demo's "asleep" step: no sessions at all
   if (now - last_activity_ms > QUIET_SLEEP_MS) return P_SLEEP;   // a long quiet
   return P_IDLE;
 }

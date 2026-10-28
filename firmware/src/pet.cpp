@@ -271,7 +271,11 @@ void blit(Slot &s, const uint32_t *src, int sw, int sh, bool fit) {
   int ow = w, oh = h, ox = 0, oy = 0;
   if (fit) {   // GIF: keep the aspect ratio, centered
     float k = min(float(w) / sw, float(h) / sh);
-    if (k >= 1) k = floorf(k);   // whole-pixel enlargement keeps pixel art crisp
+    // whole-pixel enlargement keeps pixel art crisp; 1.5x too, so canvas-sized packs (135x82, as
+    // the ASCII pets) fill the Home slot the way they do
+    if (k >= 2) k = floorf(k);
+    else if (k >= 1.5f) k = 1.5f;
+    else if (k >= 1) k = 1;
     ow = max(1, int(sw * k));
     oh = max(1, int(sh * k));
     ox = (w - ow) / 2;

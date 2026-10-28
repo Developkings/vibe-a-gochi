@@ -104,7 +104,7 @@ click **Connect** and pick the board's port. Then add both files with these addr
 | Flash address | File |
 |---|---|
 | `0x0` | `vibe-a-gochi-factory.bin` (the firmware) |
-| `0xc90000` | `vibe-a-gochi-characters.bin` (the DevelopKing character) |
+| `0xc90000` | `vibe-a-gochi-characters.bin` (the DevelopKing and Hunold Holzwurm characters) |
 
 Click **Program** and wait for it to finish, then press **RST**.
 
@@ -231,8 +231,14 @@ Code logs. The pet feeds on your Claude activity: the more Claude works, the mor
 higher its level. Answering approvals quickly makes it happy, and denying a lot makes it sad. It gets
 tired the longer it stays awake, and a nap while you're away restores its energy.
 
-- **Characters** (More → Characters): DevelopKing, the pixel-art king in the pictures, or one of 18
-  little ASCII pets.
+- **Characters** (More → Characters): DevelopKing, the pixel-art king in the pictures, Hunold
+  Holzwurm, a woodworm in round glasses and a puffer vest, or one of 18 little ASCII pets.
+
+<p>
+  <img src="characters/hunold/preview/idle.gif" width="32%" alt="Hunold Holzwurm, idle">
+  <img src="characters/hunold/preview/celebrate.gif" width="32%" alt="Hunold Holzwurm, celebrating">
+  <img src="characters/hunold/preview/heart.gif" width="32%" alt="Hunold Holzwurm, in love">
+</p>
 - **Today** (More → Today) sums up your day: time worked, projects and chats, prompts, files changed,
   tools used, your streak, and optionally a short written recap made by Claude (Settings → Day recap
   by Claude). The clock icon at the top switches to yesterday.
@@ -279,7 +285,10 @@ don't edit them. Edit `ui/tools/gen_ui.py` (screens), `ui/tools/i18n.py` (texts 
 
 **Your own character:** `characters/developking` has the scripts that draw DevelopKing and pack his
 animations (idle, busy, attention, celebrate, sleep…). Draw your own pixel-art pet the same way, put it
-in `firmware/data/characters` and upload it with `pio run -t uploadfs`.
+in `firmware/data/characters` and upload it with `pio run -t uploadfs`. Already have pixel art of your
+character? `characters/hunold` starts from a drawing instead: `trace.py` reads the picture back on its
+own pixel grid and `animate.py` moves its eyes, mouth, hand and antennae. Packs can be 96 x 61 (shown
+2x on Home) or 135 x 82 (1.5x).
 
 **Ideas:** a 3D-printed case, a battery, more languages, more quick commands. Pull requests are welcome!
 
@@ -288,10 +297,11 @@ in `firmware/data/characters` and upload it with `pio run -t uploadfs`.
 | Folder | |
 |---|---|
 | `firmware/` | the board's firmware (PlatformIO, Arduino core 3 for ESP32-S3, LVGL 9) |
-| `firmware/data/` | files for the board's flash: the DevelopKing character |
+| `firmware/data/` | files for the board's flash: the DevelopKing and Hunold characters |
 | `companion/` | the PC side (Python): Claude Code hooks, the companion app, setup |
 | `ui/` | the generator of the touch UI (`ui/tools/gen_ui.py` writes an EEZ Studio project) |
 | `characters/developking/` | the DevelopKing pixel-art character and the scripts that draw it |
+| `characters/hunold/` | Hunold Holzwurm: his reference art and the scripts that animate it |
 | `docs/companion.md` | how the board and the PC talk |
 
 ## Privacy
